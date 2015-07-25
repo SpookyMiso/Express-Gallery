@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  p author: #{picture.author}
+  p description: #{picture.description}
+  img(id="randomphotos",src="#{picture.url}")

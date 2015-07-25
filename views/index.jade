@@ -1,0 +1,20 @@
+extends layout
+extends layout
+
+block content
+
+  h1 Welcome Express-Gallery
+  h1 Feel free to explore!
+  ul
+    each picture in pictures
+      p author: #{picture.author}
+      p description: #{picture.description}
+      img(id="randomphotos",src="#{picture.url}")
+      a(href="http://localhost:8080/gallery:id")
+        button(id="more_info")  More info
+      a(href="http://localhost:8080/gallery/:id/edit")
+        button(id="edit_info")  Edit photo
+      a(href="http://localhost:8080/gallery:id")
+        button(id="delete_info")  Delete photo
+  a(href="http://localhost:8080/new_photo")
+    button(id="add_photo") New Photo?

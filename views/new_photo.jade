@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  form(action="/Gallery", type="submit", method="POST")
+    h1 Submit a new photo
+    input(name="author", type="text", placeholder="Author name", id="author_input")
+    input(name="description", type="text", placeholder="Description", id="description_input")
+    input(name="link", type="text", placeholder="URL", id="url_link")
+    button(id="button_submit") Submit
